@@ -1,0 +1,96 @@
+/* 🌟 General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
+/* 🌟 Form Container */
+.container, .home-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: 500px; /* Increased width */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover, .home-container:hover {
+  transform: scale(1.03);
+}
+
+/* 🌟 Form Sections */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* 🌟 Address & Education Box */
+.address-section, .education-section {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between inputs */
+}
+
+/* 🌟 Fix Overlapping Issue */
+.address-section,
+.education-section {
+  min-height: auto; /* Auto height to fit content */
+  width: 100%;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* 🌟 Input Fields */
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* 🌟 Responsive Fix */
+@media (max-width: 768px) {
+  .container, .home-container {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .address-section,
+  .education-section {
+    padding: 20px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container, .home-container {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .address-section,
+  .education-section {
+    padding: 20px;
+    width: 100%;
+    min-height: auto;
+  }
+}
